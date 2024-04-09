@@ -1,0 +1,46 @@
+
+/* TITULO PORTADA*/
+span{
+    color: white;
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    /*border-right: 42px solid;*/
+    width: 42ch; /*Numero de caracteres de la linea*/
+    font-size: 42px;
+    text-align: center;
+    margin:auto;
+    margin-top: 350px;
+    animation-delay: 7s;
+    animation: typing 2s steps(52),
+    blink .5s infinite step-end alternate;
+    overflow: hidden; 
+    animation-timing-function: ease-in;
+}
+@keyframes typing {
+    from{ width: 42px }
+}
+
+@keyframes blink{
+0% {border: transparent }
+}
+
+/*BOTON INICIO SESIÓN*/
+.btn {
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 15px;
+    position:absolute; top:5%; left: 80%;
+    
+}
+
+/*LOGO PAGINA WEB*/
+.figure{
+    position:absolute; top:5%; left: 5%;
+}
+

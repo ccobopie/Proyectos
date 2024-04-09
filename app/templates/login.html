@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZS</title>
+    <link rel="stylesheet" href="Styles/estilo.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+  <!-- tu contenido aquí -->
+
+  <h1>Inicio de sesión</h1>
+	<form action="login.php" method="post">
+		<label for="username">Email de acceso</label>
+		<input type="text" id="username" name="username" required><br><br>
+		<label for="password">Contraseña</label>
+		<input type="password" id="password" name="password" required><br><br>
+		<p><a href="recuperar-contraseña.html">¿No la recuerdas?</a></p>
+		<input type="checkbox" id="remember" name="remember" value="1">
+		<label for="remember">Recordar mis datos</label><br><br>
+		<input type="submit" value="Iniciar sesión">
+	</form>
+	<p>¿No estas registrado? <a href="sing.html">Regístrate en QUIZS</a>.</p>
+
+
+  </div>
+  </body>
+</html>

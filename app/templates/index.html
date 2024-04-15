@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/app/Styles/estiloportada.css">
-    <style>
-        body{
-        background-image:url('/app/img/Picture2_fondo.png');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-        }
-    </style>
-    <div class="figure">
-    <img src="/app/img/logo.png" width="150px" >
-    </div>
-</head>
-<body>
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock %}
 
-    <span>Bienvenidos a la plataforma de QUIZS</span>
-
-    <div>
-        <button class="btn" onclick="window.location.href='login.html'">Iniciar Sesion</button>
-    </div>
-</body>
-</html>
+{% block content %}
+<h1>Welcome to MyFlaskApp!</h1>
+<p>This is the homepage. You can go to the <a href="{{ url_for('login') }}">login</a> or <a href="{{ url_for('register') }}">registration</a> page.</p>
+{% endblock %}

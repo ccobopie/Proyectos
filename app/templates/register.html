@@ -1,35 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/app/Styles/sing.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-</head>
-<body>
+{% extends 'layout.html' %}
+{% block title %}Register{% endblock %}
 
-
-</body>
-</html>
-
-<form action="#" method="post">
-
-    <h2>Datos de contacto</h2>
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required><br>
-
-    <label for="email_empresa">Correo electrónico:</label>
-    <input type="email" id="email_empresa" name="email_empresa" required><br>
-
-    <label for="contraseña">Contraseña:</label>
-    <input type="password" id="contraseña" name="contraseña" required><br>
-
-    <label for="contraseña">Repetir Contraseña:</label>
-    <input type="password" id="contraseña" name="contraseña" required><br>
-
-    <input type="submit" value="Registrar">
-  </form>
+{% block content %}
+<h2>Register</h2>
+<form method="POST" action="{{ url_for('register') }}">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">
+        {{ form.username.label(class="form-label") }}
+        {{ form.username(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.email.label(class="form-label") }}
+        {{ form.email(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.password.label(class="form-label") }}
+        {{ form.password(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.confirm_password.label(class="form-label") }}
+        {{ form.confirm_password(class="form-control") }}
+    </div>
+    <div class="mb-3">
+        {{ form.submit(class="btn btn-primary") }}
+    </div>
+</form>
+{% endblock %}
